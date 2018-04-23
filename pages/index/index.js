@@ -30,20 +30,21 @@ Page((i = {
         slideWidth: 0,
         imagewidth: 0,
         imageheight: 0,
-        array: [ "3-5岁", "6-8岁", "9-12岁", "13-18岁" ],
+        array: [ "3-4岁", "4-5岁", "5-6岁", "6-12岁"],
         index: 0,
-        foot: [ "https://m.risecenter.com/img/rise_phone1.jpg", "https://m.risecenter.com/img/rise_looyu1.jpg", "https://m.risecenter.com/img/rise_shiting1.jpg" ],
-        head: [ "https://m.risecenter.com/img/rise_phone2.jpg", "https://m.risecenter.com/img/rise_looyu2.jpg", "https://m.risecenter.com/img/rise_shiting2.jpg" ],
-        footone: "https://m.risecenter.com/img/rise_phone1.jpg",
-        foottwo: "https://m.risecenter.com/img/rise_looyu1.jpg",
-        foottree: "https://m.risecenter.com/img/rise_shiting1.jpg",
+        foot: [ "../../images/all/footer-phone-shine.jpg", "../../images/all/footer-consult-shine.jpg", "../../images/all/footer-free-shine.jpg" ],
+        footone: "../../images/all/footer-phone-default.jpg",
+        foottwo: "../../images/all/footer-consult-default.jpg",
+        foottree: "../../images/all/footer-free-default.jpg",
         footbool: !0,
         city: "",
         school: "",
         reid: "",
         footr: 0,
         footh: 0,
-        indexSelect: 0
+        indexSelect: 0,
+        reserved: false,
+        access_token: ''
     },
     bindViewTap: function() {
         wx.navigateTo({
@@ -54,57 +55,6 @@ Page((i = {
         console.log(1);
     },
     onLoad: function() {
-        wx.login({
-            success: function(e) {
-                e.code && wx.request({
-                    url: "https://api.weixin.qq.com/sns/jscode2session",
-                    data: {
-                        appid: "wxcefa452fdfbee993",
-                        secret: "205978937e0b9380fe8aaeee6bf7720e",
-                        grant_type: "authorization_code",
-                        js_code: e.code
-                    },
-                    method: "GET",
-                    header: {
-                        "content-type": "application/json"
-                    },
-                    success: function(e) {
-                        console.info("登录成功返回的openId：" + e.data.openid), o = e.data.openid, null != e.data.openid & void 0 != e.data.openid ? wx.getUserInfo({
-                            success: function(e) {
-                                console.log("data的数据", e.userInfo.nickName);
-                                var t = {
-                                    openid: o,
-                                    nickName: e.userInfo.nickName,
-                                    avatarUrl: e.userInfo.avatarUrl,
-                                    gender: e.userInfo.gender,
-                                    province: e.userInfo.province,
-                                    city: e.userInfo.province,
-                                    country: e.userInfo.country,
-                                    language: e.userInfo.language
-                                };
-                                wx.request({
-                                    url: "https://data.risecenter.com/index.php?g=portal&m=index&a=getWechatuser",
-                                    data: t,
-                                    method: "POST",
-                                    header: {
-                                        "Content-Type": "application/x-www-form-urlencoded"
-                                    },
-                                    success: function(e) {
-                                        console.log("查看是否提交成功", e);
-                                    }
-                                });
-                            },
-                            fail: function(e) {
-                                console.info("用户拒绝授权");
-                            }
-                        }) : console.info("获取用户openId失败");
-                    },
-                    fail: function(e) {
-                        console.info("获取用户openId失败"), console.info(e);
-                    }
-                });
-            }
-        });
         var e = this;
         wx.getStorage({
             key: "imagewidth",
@@ -113,34 +63,17 @@ Page((i = {
                     imagewidth: t.data
                 });
             }
-        }), wx.getLocation({
-            success: function(t) {
-                var i = t.latitude, o = t.longitude;
-                wx.setStorage({
-                    key: "lat",
-                    data: i
-                }), wx.setStorage({
-                    key: "lng",
-                    data: o
-                });
-                var n = "https://m.risecenter.com/xyapi.php?act=getLocation&lat=" + i + "&lng=" + o + "&distance=20000&reid=0&type=1&limit=1";
-                wx.request({
-                    url: n,
-                    data: {},
-                    header: {
-                        "content-type": "application/json"
-                    },
-                    success: function(t) {
-                        var i = t.data[0].cityName, o = t.data[0].typename, n = t.data[0].reid;
-                        e.setData({
-                            city: i,
-                            school: o,
-                            reid: n
-                        });
-                    }
-                });
-            }
-        }), t(this);
+        })
+        , null, t(this);
+
+        wx.request({
+          url: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx97c1a792616eb190&secret=1eb63ce603a5fa171337dbea4fd46a28',
+          success(res) {
+            e.setData({
+              access_token: res.data.access_token
+            })
+          }
+        });
     },
     onShow: function() {
         wx.getStorage({
@@ -200,85 +133,84 @@ Page((i = {
         url: "school?reid=" + e.currentTarget.dataset.reid
     });
 }), e(i, "formSubmit", function(e) {
+  if(this.data.reserved) {
+    wx.showToast({
+      title: '请勿重复提交！',
+      icon: 'none'
+    })
+    setTimeout(() => {
+      this.setData({
+        reserved: false
+      })
+    }, 10000);
+    return;
+  }
     var t = this.data.array[e.detail.value.age];
-    if (0 != e.detail.value.name.length) {
-        var i = {
-            xingming: e.detail.value.name,
-            tel: e.detail.value.tel,
-            age: t,
-            cityname: e.detail.value.city,
-            checked_school: e.detail.value.school,
-            medium: "少儿英语培训机构排名",
-            title: "少儿英语培训机构排名"
-        };
-        wx.request({
-            url: "https://m.risecenter.com/xyapi.php?act=add_diyform1",
-            data: i,
-            method: "POST",
-            header: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            success: function(e) {
-                "提交成功" == e.data.msg ? wx.navigateTo({
-                    url: "succeed"
-                }) : wx.showModal({
-                    title: "提示",
-                    content: e.data.msg,
-                    showCancel: !1,
-                    success: function(e) {
-                        e.confirm && console.log("用户点击确定");
-                    }
-                });
-            },
-            fail: function(e) {
-                console.log("请求失败", e);
-            },
-            complete: function(e) {}
-        });
-    } else wx.showModal({
+    if(e.detail.value.name.length === 0) {
+      wx.showModal({
         title: "提示",
         content: "请填写宝贝姓名",
         showCancel: !1,
         success: function(e) {
             e.confirm && console.log("用户点击确定");
         }
-    });
-}), e(i, "cellview", function(e) {
-    switch (e.currentTarget.dataset.index) {
-      case 0:
-        wx.makePhoneCall({
-            phoneNumber: "4006101100"
-        }), console.log("123");
-        break;
-
-      case 1:
-        wx.makePhoneCall({
-            phoneNumber: "4006101100"
-        });
-        break;
-
-      case 2:
-        wx.navigateTo({
-            url: "audition"
-        });
+      });
+      return;
     }
+    if(e.detail.value.tel.length === 0) {
+      wx.showModal({
+        title: "提示",
+        content: "请填写电话号码",
+        showCancel: !1,
+        success: function(e) {
+            e.confirm && console.log("用户点击确定");
+        }
+      });
+      return;
+    }
+    let info = {
+      name: e.detail.value.name,
+      age: this.data.array[e.detail.value.age],
+      tel: e.detail.value.tel
+    };
+    let info_str = JSON.stringify(info);
+
+    console.log(this.data.access_token);
+    console.log(info);
+    this.setData({
+      reserved: true
+    })
+}), e(i, "phonecall", function(e) {
+  wx.makePhoneCall({
+    phoneNumber: "18691780041"
+  });
+}), e(i, "sharePage", function(e) {
+  console.log('sdaskdjkasdjkasld')
+  wx.showShareMenu({
+    withShareTicket: true,
+    success(e) {
+      console.log('shared ok')
+    },
+    fail(e) {
+      console.log('shared fail')
+    }
+  })
 }), e(i, "auditionview", function() {
     wx.navigateTo({
         url: "audition"
     });
 }), e(i, "onPullDownRefresh", function() {
-    setTimeout(function() {
-        wx.stopPullDownRefresh();
-    }, 2e3);
+      wx.stopPullDownRefresh();
 }), e(i, "onReachBottom", function() {}), e(i, "onShareAppMessage", function(e) {
     return {
-        title: "瑞思学科英语",
-        path: "/pages/index/high?id=123",
+        title: "World环球国际少儿英语",
+        path: "/pages/index/index",
         success: function(e) {
-            console.log("转发成功");
+            wx.showToast({
+              title: '转发成功！'
+            })
         },
         fail: function(e) {
-            console.log("转发失败");
         }
     };
 }), i));

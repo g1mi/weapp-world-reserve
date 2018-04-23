@@ -17,5 +17,8 @@ App({
     },
     globalData: {
         userInfo: null
+    },
+    onLoad: function() {
+      this.getUserInfo();
     }
 });

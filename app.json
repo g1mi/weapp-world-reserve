@@ -1,23 +1,13 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/index/low",
-        "pages/index/medium",
-        "pages/index/high",
-        "pages/index/city",
-        "pages/index/school",
-        "pages/index/succeed",
-        "pages/index/highcity",
-        "pages/index/audition",
-        "pages/index/more",
-        "pages/logs/logs",
-        "pages/index/game"
+        "pages/logs/logs"
     ],
     "window": {
         "enablePullDownRefresh": true,
         "backgroundTextStyle": "dark",
-        "navigationBarBackgroundColor": "#7e308e",
-        "navigationBarTitleText": "瑞思学科英语",
+        "navigationBarBackgroundColor": "#546fb5",
+        "navigationBarTitleText": "World 环球国际少儿美语",
         "navigationBarTextStyle": "white"
     },
     "networkTimeout": {
