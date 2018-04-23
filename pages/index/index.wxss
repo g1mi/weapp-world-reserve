@@ -1,0 +1,203 @@
+.view-conter {
+    border-top: 1px solid #eee;
+    background: #7e308e;
+    height: 145rpx;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-conter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-conter image {
+    height: 145rpx;
+    width: 90%;
+}
+
+.sgin-img {
+    height: 20px;
+}
+
+.name-input {
+    border: 1px solid #7e308e;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+button[type="primary"] {
+    background-color: #7e308e;
+}
+
+.button-view {
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.name-view {
+    background-image: url(https://m.risecenter.com/img/rise_input_name.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3% 5%;
+    margin: 0% 5%;
+    display: flex;
+    font-size: 0.7em;
+    align-items: center;
+    margin-bottom: 5px;
+    line-height: 14px;
+    position: relative;
+}
+
+.name-centent {
+    position: relative;
+}
+
+.sign-conter {
+    padding: 20px 0px;
+}
+
+.name-view input {
+    position: absolute;
+    left: 26%;
+    padding: 2% 0;
+    top: 0px;
+}
+
+.name-view label {
+}
+
+.age-view {
+    font-size: 0.7em;
+    border: 1px solid #A47DAD;
+    width: 30%;
+    border-radius: 6px;
+    position: absolute;
+    top: 0px;
+    left: 64%;
+}
+
+.age-view picker {
+    height: 100%;
+    padding: 8.2% 1%;
+}
+
+.cell-view {
+    background-image: url(http://m.risecenter.com/img/rise_input_phone.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3% 5%;
+    margin: 0% 5%;
+    display: flex;
+    font-size: 0.7em;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.cell-view input {
+    position: absolute;
+    left: 26%;
+    width: 74%;
+    padding: 2% 0;
+    top: 0px;
+}
+
+.cell-view label {
+}
+
+.school-view {
+    padding-top: 10px;
+    background-image: url(http://m.risecenter.com/img/rise_input_schools.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3% 5%;
+    margin: 0% 5%;
+    display: flex;
+    font-size: 0.7em;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.city-view text {
+    position: relative;
+    left: -4%;
+}
+
+.school-view input {
+    position: relative;
+    left: -4%;
+    display: none;
+}
+
+.school-view label {
+}
+
+.view-text {
+    padding: 30px 0px;
+    font-size: .7em;
+    color: #939393;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.view-flex {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.block-view {
+    background: #ececeb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.foot-view image {
+}
+
+.city-label {
+    background: red;
+    margin-left: 10%;
+}
+
+.school-label {
+    margin-left: 18%;
+}
+
+.city-click {
+    width: 22%;
+    padding: 8px 0;
+    position: absolute;
+    top: 2px;
+    left: 27%;
+    text-align: left;
+}
+
+.school-click {
+    width: 49%;
+    padding: 8px 0;
+    position: absolute;
+    top: 2px;
+    left: 51%;
+    text-align: left;
+}
+
+.customer {
+    background: red;
+    width: 80px;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 38%;
+    z-index: 999999;
+    background-color: #000000;
+    opacity: 0.0;
+}

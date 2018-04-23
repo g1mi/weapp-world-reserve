@@ -1,0 +1,25 @@
+<view class="view-content">
+    <view catchtap="clickcall" class="school-view" data-call="{{item.school_tel}}" wx:for="{{schoolarr}}">
+        <view class="school-name">
+            <text>{{item.typename}}</text>
+        </view>
+        <view class="location-view">
+            <text>{{item.school_add}}</text>
+        </view>
+        <view class="text-view"></view>
+        <view catchtap="clickcall" class="call-view" data-call="{{item.school_tel}}">
+            <image src="https://m.risecenter.com/img/tongji.png"></image>
+        </view>
+        <view catchtap="clicklocation" class="location-img">
+            <image src="https://m.risecenter.com/img/city-jl.png"></image>
+            <text>{{item.calculatedDistance}}km</text>
+        </view>
+    </view>
+    <view class="view-flex">
+        <view class="block-view">
+            <view bindtap="cellview" class="foot-view" data-index="{{index}}" wx:for="{{foot}}">
+                <image src="{{index==indexSelect?head.index:item}}" style="width:{{80}}px; height:{{40}}px; "></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,63 @@
+<view class="container">
+    <view class="mian">
+        <view class="header">
+            <view class="logo">
+                <image mode="widthFix" src="https://m.risecenter.com/img/logo.png"></image>
+            </view>
+        </view>
+        <view class="con form_body">
+            <view class="con-img">
+                <image mode="widthFix" src="https://m.risecenter.com/img/form_pic_top.jpg"></image>
+            </view>
+            <view class="formbody">
+                <view class="form-title">
+                    <image mode="widthFix" src="https://m.risecenter.com/img/form_pic_title.png"></image>
+                </view>
+            </view>
+        </view>
+        <view class="from-conter">
+            <form bindreset="formReset" bindsubmit="formSubmit">
+                <view class="name-centent">
+                    <view class="name-view">
+                        <label>宝贝姓名</label>
+                        <input cursorSpacing="{{100}}" name="name" placeholder="请输入宝贝姓名"></input>
+                    </view>
+                    <view class="age-view">
+                        <picker bindchange="bindPickerChange" name="age" range="{{array}}" value="{{index}}">
+                            <view class="picker">
+              选择年龄：{{array.index}}
+            </view>
+                        </picker>
+                    </view>
+                </view>
+                <view class="cell-view">
+                    <label>电话号码</label>
+                    <input cursorSpacing="{{100}}" name="tel" placeholder="请输入电话" type="number"></input>
+                </view>
+                <view class="school-view">
+                    <label>选择校区</label>
+                    <view catchtap="clickcity" class="city-click">
+                        <label name="ctiy" style="width:{{'20%'}}">{{city.length==0?'城市':city}}</label>
+                        <input disabled="{{true}}" name="city" style="width:{{0}}px;height:{{0}}px" type="hidden" value="{{city}}"></input>
+                    </view>
+                    <view catchtap="clickschool" class="school-click" data-reid="{{reid}}">
+                        <label>{{school.length==0?'校区':school}}</label>
+                        <input disabled="{{true}}" name="school" style="width:{{0}}px;height:{{0}}px" type="hidden" value="{{school}}"></input>
+                    </view>
+                </view>
+                <view class="button-view">
+                    <button formType="submit" hoverClass="none" plain="true" style="plain:{{true}}">
+                        <image bindtap="powerDrawer" data-statu="{{'open'}}" src="http://club.risecenter.com/data/risedisk/smallProgram/images/button.png"></image>
+                    </button>
+                </view>
+            </form>
+        </view>
+    </view>
+    <view class="view-flex">
+        <view class="block-view">
+            <view bindtap="cellview" class="foot-view" data-index="{{index}}" wx:for="{{foot}}">
+                <image src="{{index==indexSelect?head.index:item}}" style="width:{{80}}px; height:{{40}}px; "></image>
+            </view>
+        </view>
+    </view>
+</view>

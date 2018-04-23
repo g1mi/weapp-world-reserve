@@ -1,0 +1,27 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/low",
+        "pages/index/medium",
+        "pages/index/high",
+        "pages/index/city",
+        "pages/index/school",
+        "pages/index/succeed",
+        "pages/index/highcity",
+        "pages/index/audition",
+        "pages/index/more",
+        "pages/logs/logs",
+        "pages/index/game"
+    ],
+    "window": {
+        "enablePullDownRefresh": true,
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#7e308e",
+        "navigationBarTitleText": "瑞思学科英语",
+        "navigationBarTextStyle": "white"
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    }
+}

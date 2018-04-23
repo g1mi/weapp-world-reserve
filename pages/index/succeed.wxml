@@ -1,0 +1,5 @@
+<view class="content-view">
+    <view class="image-view">
+        <image bindload="cusImageLoad" src="https://m.risecenter.com/images/submit.jpg" style="width:{{imagewidth}}px;height:{{imageheight}}px"></image>
+    </view>
+</view>

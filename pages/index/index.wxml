@@ -1,0 +1,68 @@
+<view class="container">
+    <view class="view-conter">
+        <image src="https://m.risecenter.com/img/logo.png"></image>
+    </view>
+    <view class="img-conter">
+        <image bindload="cusImageLoad" bindtap="clickimg" data-i="{{index}}" mode="widthFix" src="{{item}}" style="width: {{imagewidth}}px; height: {{130}}px;" wx:for="{{img}}"></image>
+    </view>
+    <view class="sign-conter">
+        <image bindload="cusImageLoad" class="sign-img" mode="widthFix" src="https://m.risecenter.com/img/rise_form_title.jpg" style="width:{{imagewidth}}px;height:{{30}}px"></image>
+    </view>
+    <view class="from-conter">
+        <form bindreset="formReset" bindsubmit="formSubmit">
+            <view class="name-centent">
+                <view class="name-view">
+                    <label>宝贝姓名</label>
+                    <input cursorSpacing="{{100}}" name="name" placeholder="请输入宝贝姓名"></input>
+                </view>
+                <view class="age-view">
+                    <picker bindchange="bindPickerChange" name="age" range="{{array}}" value="{{index}}">
+                        <view class="picker">
+              选择年龄：{{array.index}}
+            </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="cell-view">
+                <label>电话号码</label>
+                <input cursorSpacing="{{100}}" name="tel" placeholder="请输入电话" type="number"></input>
+            </view>
+            <view class="school-view">
+                <label>选择校区</label>
+                <view catchtap="clickcity" class="city-click">
+                    <label name="ctiy" style="width:{{'20%'}}">{{city.length==0?'城市':city}}</label>
+                    <input disabled="{{true}}" name="city" style="width:{{0}}px;height:{{0}}px" type="hidden" value="{{city}}"></input>
+                </view>
+                <view catchtap="clickschool" class="school-click" data-reid="{{reid}}">
+                    <label>{{school.length==0?'校区':school}}</label>
+                    <input disabled="{{true}}" name="school" style="width:{{0}}px;height:{{0}}px" type="hidden" value="{{school}}"></input>
+                </view>
+            </view>
+            <button class="button-view" formType="submit" hoverClass="none" type="primary">立即提交</button>
+        </form>
+    </view>
+    <view class="view-text">
+ 
+   京ICP备09087483号 <image src="https://m.risecenter.com/images/file_ico.png" style="width:{{20}}px;height:{{20}}px"></image>
+        <text>京公网安备11010102002030
+ </text>
+        <text>北京领语堂教育科技发展有限公司 400-610-1100</text>
+    </view>
+    <view class="view-flex">
+        <view class="block-view">
+            <view bindtap="cellview" class="foot-view" data-index="{{index}}" wx:for="{{foot}}">
+                <image src="{{index==indexSelect?head.index:item}}" style="width:{{80}}px; height:{{40}}px; "></image>
+            </view>
+            <view class="customer">
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+                <contact-button sessionFrom="weapp" size="20" type="default-light"></contact-button>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,181 @@
+<view class="main">
+    <view class="header">
+        <image mode="widthFix" src="https://m.risecenter.com/images/activity/logo.png"></image>
+    </view>
+    <view class="activity-con">
+        <view class="act-img">
+            <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_01.jpg"></image>
+            <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_02.jpg"></image>
+            <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_03.jpg"></image>
+            <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_04.jpg"></image>
+            <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_05.jpg"></image>
+        </view>
+    </view>
+    <view class="activity-con">
+        <view class="act-title-h2">
+         十大美式主题游戏
+         </view>
+        <view class="act-title-h4 p-top5" style="margin-top:{{10}}px;">
+         1.适合3-5岁Baby：
+         </view>
+        <view class="act-mess">
+            <text> 生物实验室、宠物大变身、
+创意毕加索、百变小甲虫、未来大画家。 
+</text>
+        </view>
+        <view class="act-title-h4 p-top5" style="margin-top:{{10}}px;">2.适合6-12岁Baby：</view>
+        <view class="act-mess">
+            <text>  加号历险记、环保小卫士、
+魔力面包房、数字的奥秘、魔法大辞典。  
+</text>
+        </view>
+        <view class="activity-con p-top10" style="margin-top:{{10}}px;">
+            <view class="act-title-h2">
+          开始游戏！
+        </view>
+            <view class="act-list p-top5" style="margin-top:{{20}}px;">
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon1.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 开场教您专属的亲子互动舞;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon2.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 帮宝贝认识身体的组成部分;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon3.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 趣味读数，探索数字的秘密;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon4.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 开启美式主题游戏;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon5.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 世界真色彩，让宝贝用英语说出颜色;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon6.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text>  家长自己的教育课堂;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon7.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 宝贝练习当众介绍自己;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon8.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 看动画片参与互动问答;</text>
+                </view>
+                <view>
+                    <image src="https://m.risecenter.com/images/activity/ien_icon9.jpg" style="width:{{26}}px;height:{{20}}px"></image>
+                    <text> 活动安排以校区实际情况为准;</text>
+                </view>
+            </view>
+            <view class="activity-con p-top10" style="margin-top:{{20}}px;">
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_6.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_7.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_8.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_9.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_10.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="https://m.risecenter.com/images/activity/ien_11.jpg"></image>
+                </view>
+            </view>
+            <view class="activity-con p-top10" style="margin-top:{{20}}px;">
+                <view class="act-title-h2">谁和孩子玩？</view>
+                <view class="act-mess p-top5" style="margin-top:{{20}}px;">
+            拥有3-5年少儿教育经验的外语教师带来全新的互动体验，让您的孩子下课就能说英语！ 
+           </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_12.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_13.jpg"></image>
+                </view>
+                <view class="act-img">
+                    <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_14.jpg"></image>
+                </view>
+            </view>
+        </view>
+        <view class="activity-con p-top10" style="margin-top:{{20}}px;">
+            <view class="act-title-h2">发现宝贝潜在能力</view>
+            <view class="act-mess p-top5" style="margin-top:{{20}}px;">
+                <text>1. 8-10人游戏小组，既给宝贝们提供各自展现的机会，又能看看他们在团队活动中的表现;
+</text>
+                <text>2. 老师会不时蹲在宝贝旁边交流，让每位宝贝快速参与到游戏中;
+</text>
+                <text>3. 培养宝贝的团队协作精神，发现宝贝潜在的超能力。
+</text>
+            </view>
+            <view class="act-title-h2">瑞思环境</view>
+            <view class="act-img p-top5" style="margin-top:{{20}}px;">
+                <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_15.jpg"></image>
+                <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_16.jpg"></image>
+                <image mode="widthFix" src="http://m.risecenter.com/images/activity/ien_17.jpg"></image>
+            </view>
+            <view class="act-title-h2">两小时免费畅游</view>
+            <view class="act-mess p-top5"> 上述两小时主题游戏完全免费，需提前预约，抢先体验！ </view>
+        </view>
+    </view>
+    <view class="ten-view">
+        <view class="ten-img">
+            <image mode="widthFix" src="https://m.risecenter.com/img/form-title.png"></image>
+        </view>
+        <form bindreset="formReset" bindsubmit="formSubmit">
+            <view class="input-view">
+                <view class="name-input">
+                    <label>宝贝姓名</label>
+                    <view style="width:{{'60%'}}">
+                        <input cursorSpacing="{{100}}" name="name" type="text"></input>
+                    </view>
+                </view>
+                <view class="name-input">
+                    <label>家长电话</label>
+                    <view style="width:{{'60%'}}">
+                        <input cursorSpacing="{{100}}" name="tel" type="number"></input>
+                    </view>
+                </view>
+                <view class="name-radio">
+                    <label>孩子年龄</label>
+                    <radio-group bindchange="radioChange" class="radio-group" name="age">
+                        <label class="radio {{currentNavtab==index?'active':''}}" style="position:{{relative}};left:{{0}}px" wx:for="{{age}}">
+                            <radio checked="{{item.checked}}" name="age" style="color:{{red}}" value="{{item.name}}"></radio>{{item.value}}
+  </label>
+                    </radio-group>
+                </view>
+                <view class="name-input">
+                    <label>选择城市</label>
+                    <view style="position:{{'relative'}};width:{{'60%'}}">
+                        <input catchtap="clickcity" disabled="{{true}}" name="city" type="text" value="{{city.length==0?'城市':city}}"></input>
+                        <view catchtap="clickcity" class="inputview"></view>
+                    </view>
+                </view>
+                <view class="name-input">
+                    <label>选择校区</label>
+                    <view style="position:{{'relative'}};width:{{'60%'}}">
+                        <input catchtap="clickschool" data-reid="{{reid}}" disabled="{{true}}" name="school" type="text" value="{{school.length==0?'校区':school}}"></input>
+                        <view catchtap="clickschool" class="inputview" data-reid="{{reid}}"></view>
+                    </view>
+                </view>
+                <button class="button-view" formType="submit" hoverClass="none" type="primary">立即提交</button>
+            </view>
+        </form>
+    </view>
+</view>
+<view class="view-flex">
+    <view class="block-view">
+        <view bindtap="cellview" class="foot-view" data-index="{{index}}" wx:for="{{foot}}">
+            <image src="{{index==indexSelect?head.index:item}}" style="width:{{80}}px; height:{{40}}px; "></image>
+        </view>
+    </view>
+</view>
